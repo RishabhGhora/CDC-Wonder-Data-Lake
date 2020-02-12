@@ -6,8 +6,8 @@ import {
 	Link
 } from 'react-router-dom';
 
-import './App.css';
-import GraphPage  	from './graphPage.js';
+import './styles/App.css';
+import GraphPage  	from './pages/Graph/Graph.js';
 import Home 		from './pages/Home/Home.js';
 
 

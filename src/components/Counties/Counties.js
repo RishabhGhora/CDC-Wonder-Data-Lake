@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import './Counties.css';
+import {
+  Collapse,
+  Button,
+  Dropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem
+} from 'reactstrap';
+
+import '../../styles/Counties.css';
 
 class Counties extends Component {
     constructor(props) {

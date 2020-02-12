@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
-import { Collapse, Button, Dropdown, DropdownToggle, DropdownMenu, DropdownItem  } from 'reactstrap';
-import './Dates.css';
+import {
+  Collapse,
+  Button,
+  Dropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem
+} from 'reactstrap';
+
+import '../../styles/Dates.css';
 
 
 class Dates extends Component {

@@ -1,6 +1,14 @@
 import React, { Component, useState } from 'react';
-import { Collapse, Button, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import './Subcategory.css';
+import {
+  Collapse,
+  Button,
+  Dropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem
+} from 'reactstrap';
+
+import '../../styles/Subcategory.css';
 
 const Location = (props) => {
   

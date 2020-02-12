@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
-import { Collapse, Button, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import './Demographic.css';
+import {
+  Collapse,
+  Button,
+  Dropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem
+} from 'reactstrap';
+
+import '../../styles/Demographic.css';
 
 class Demographic extends Component {
   constructor(props) {
