@@ -1,21 +1,16 @@
 import React, { Component } from 'react';
-// import './Home.css';
+
+import '../../styles/Home.css';
+
+import SearchBar from '../../components/SearchBar/SearchBar.js'
 
 class Home extends Component {
-
-	searchOnClick() {
-		
-	}
 
 	render() {
 		return (
 			<div>
-				<input type="text" id="search" placeholder="What would you like to know?" />
-				<button type="button">
-					<a href="/graph">
-						Search
-					</a>
-				</button>
+				<img id="logo" alt="CDC WONDER logo." src={require('../../test_logo.svg')} />
+				<SearchBar />
 			</div>
 		)
 	}

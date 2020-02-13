@@ -177,23 +177,23 @@ clearFilters = () => {
 		const { location, type, data, year }  = this.state;
 	
 		return (
-			<div className="graphPage">
-				<img className="logo" src={require('../../wonder-logo.png')} />
-				<img className="home" src={require('../../home.png')} />
-				<h1 className="graph-title">{type} Cases in {location}</h1>
-				<h2 className="graph-year">{year}</h2>
-				<LineChart className="graph" data={data} />
-				<Button color="primary" className="export-button" style={{ fontSize: '20px', height: '45px', marginBottom: '1rem', width: '200px', textAlign: 'center'}}>
+			<div class="graphPage">
+				<img class="logo" src={require('../../wonder-logo.png')} />
+				<img class="home" src={require('../../home.png')} />
+				<h1 class="graph-title">{type} Cases in {location}</h1>
+				<h2 class="graph-year">{year}</h2>
+				<LineChart class="graph" data={data} />
+				<Button color="primary" class="export-button" style={{ fontSize: '20px', height: '45px', marginBottom: '1rem', width: '200px', textAlign: 'center'}}>
 					Export 
 				</Button> 
-				<Button color="primary" className="clear-button" onClick={this.clearFilters} style={{ fontSize: '20px', height: '45px', marginBottom: '1rem', width: '200px', textAlign: 'center'}}>
+				<Button color="primary" class="clear-button" onClick={this.clearFilters} style={{ fontSize: '20px', height: '45px', marginBottom: '1rem', width: '200px', textAlign: 'center'}}>
 					Clear 
 				</Button> 
 				<Subcategory updateType = {this.updateType} />
 				<Location2 updateLocation = {this.updateLocation1}/>
 				<Dates updateYear = {this.updateYear}/>
 				<Demographics />
-				{ data == null ? <div className="loader"><SphereSpinner 
+				{ data == null ? <div class="loader"><SphereSpinner 
 								size={50}
 								color="#2980b9"
 								loading={true}

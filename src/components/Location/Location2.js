@@ -21,8 +21,8 @@ class Location2 extends Component {
             showCounties: false,
             location: 'All States',
         };
-        this.toggle = this.toggle
-        this.toggle2 = this.toggle2
+        this.toggle = this.toggle()
+        this.toggle2 = this.toggle2()
     }
     toggle = () => {
         this.setState({
