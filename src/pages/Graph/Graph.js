@@ -16,7 +16,7 @@ import LineChart from     '../../components/LineChart/LineChart.js';
 
 firebase.initializeApp(firebaseConfig);
 
-class GraphPage extends Component {
+class Graph extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -179,7 +179,9 @@ clearFilters = () => {
 		return (
 			<div class="graphPage">
 				<img class="logo" src={require('../../wonder-logo.png')} />
-				<img class="home" src={require('../../home.png')} />
+				<a href="/">
+					<img class="home" src={require('../../home.png')}  />
+				</a>
 				<h1 class="graph-title">{type} Cases in {location}</h1>
 				<h2 class="graph-year">{year}</h2>
 				<LineChart class="graph" data={data} />
@@ -206,4 +208,4 @@ clearFilters = () => {
 
 }
 
-export default GraphPage;
+export default Graph;

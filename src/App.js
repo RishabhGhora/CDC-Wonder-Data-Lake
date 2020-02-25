@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 
 import './styles/App.css';
-import GraphPage  	from './pages/Graph/Graph.js';
+import Graph  	from './pages/Graph/Graph.js';
 import Home 		from './pages/Home/Home.js';
 
 
@@ -17,7 +17,7 @@ function App() {
   	<Router>
 	    <Switch>
 	    	<Route path="/graph">
-	    		<GraphPage />
+	    		<Graph />
 	    	</Route>
 	    	<Route path="/">
 	    		<Home />

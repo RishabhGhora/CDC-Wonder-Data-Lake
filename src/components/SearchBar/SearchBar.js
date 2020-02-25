@@ -13,7 +13,12 @@ class SearchBar extends Component {
 	render() {
 		return (
 			<div class="SearchBar">
-				<input type="text" id="search" />
+				<input list="topics" type="text" id="search" autocomplete="off" />
+				<datalist id="topics">
+					<option value="Cancer" />
+					<option value="Infant Deaths" />
+					<option value="Infectious Diseases" />
+				</datalist>
 				<button type="button">
 					<a href="/graph">
 						Search
