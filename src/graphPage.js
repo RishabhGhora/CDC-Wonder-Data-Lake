@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect} from 'react';
 import './graphPage.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import Subcategory from './menus/Subcategory.js';
@@ -31,6 +31,9 @@ class GraphPage extends Component {
     }
     this.updateLocation = this.updateLocation1
 }
+
+
+
 updateLocation1 = (state) => {
   const {allStates, georgia, california} = this.state;
   if (state == 'All States') {
@@ -85,6 +88,14 @@ updateYear = (year) => {
 
 }
 componentDidMount() {
+
+  fetch("/get_data").then(response => 
+    response.json().then(data => {
+      console.log(data)
+    }))
+
+
+
   const storage = firebase.storage();
   const storageRef = storage.ref();    
   storageRef.child('data/allStates.json').getDownloadURL().then(url => {
@@ -171,7 +182,6 @@ clearFilters = () => {
 
   
   render() {
-    console.log(this.state);
     const { location, type, data, year }  = this.state;
   
     return (
@@ -203,5 +213,6 @@ clearFilters = () => {
   }
 
 }
+
 
 export default GraphPage;
