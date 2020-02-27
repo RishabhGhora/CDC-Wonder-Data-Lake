@@ -1,0 +1,12 @@
+.Subcategory {
+    width: 50%;
+}
+
+.Card {
+    width: 400px;
+    height: 500px;
+}
+
+.demographic-container {
+    margin-left: 3%;
+}
