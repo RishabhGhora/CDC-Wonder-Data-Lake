@@ -1,0 +1,114 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+.content {
+  max-width: 500px;
+  margin: auto;
+}
+
+#myInput {
+  display: inline;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+
+
+
+.myB {
+  box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+  background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+  background-color:#79bbff;
+  border-radius:6px;
+  border:1px solid #84bbf3;
+  display:inline-block;
+  cursor:pointer;
+  color:white;
+  font-family:Arial;
+  font-size:15px;
+  font-weight:bold;
+  padding:6px 24px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #528ecc;
+}
+.myB:hover {
+  background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+  background-color:#378de5;
+}
+.myB:active {
+  position:relative;
+  top:1px;
+}
+</style>
+</head>
+<body>
+  <div class="content">
+<div style="text-align: center;">
+<h2>CDC WONDER</h2><span>
+<form class="search">
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for category..." title="Type in a name"><button type="submit" class="button"><img src="https://img.icons8.com/material-outlined/24/000000/search.png">
+        </button></form></span>
+<ul id="myUL">
+  <li><a class="myB" href="#">Infectious Diseases</a></li>
+  <li><a class="myB" href="#">Cancer</a></li>
+  <li><a class="myB" href="#">Infant Deaths</a></li>
+</ul>
+
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+</div></div>
+</body>
+
+</html>
