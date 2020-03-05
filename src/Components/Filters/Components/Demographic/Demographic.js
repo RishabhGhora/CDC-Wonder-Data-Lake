@@ -8,7 +8,7 @@ import {
   DropdownItem
 } from 'reactstrap';
 
-import '../../styles/Demographic.css';
+import 'Styles/Demographic.css';
 
 class Demographic extends Component {
   constructor(props) {

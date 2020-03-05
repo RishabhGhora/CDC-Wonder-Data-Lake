@@ -8,7 +8,7 @@ import {
   DropdownItem
 } from 'reactstrap';
 
-import '../../styles/Subcategory.css';
+import 'Styles/Subcategory.css';
 
 class Subcategory extends Component {
   constructor(props) {

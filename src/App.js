@@ -6,9 +6,9 @@ import {
 	// Link
 } from 'react-router-dom';
 
-import './styles/App.css';
-import Graph  	from './pages/Graph/Graph.js';
-import Home 		from './pages/Home/Home.js';
+import 'Styles/App.css';
+import Graph  	from 'Pages/Graph/Graph.js';
+import Home 		from 'Pages/Home/Home.js';
 
 
 // When using Switch component, precedence is taken from top to bottom

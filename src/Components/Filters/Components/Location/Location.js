@@ -8,11 +8,11 @@ import {
     DropdownItem
 } from 'reactstrap';
 
-import '../../styles/Location.css';
+import 'Styles/Location.css';
 
 import Counties from '../Counties/Counties.js';
 
-class Location2 extends Component {
+class Location extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -38,7 +38,7 @@ class Location2 extends Component {
 
     updateLocation = (name) => {
         var showCounties  = false;
-        if (name != 'All States') {
+        if (name !== 'All States') {
             name = name + ', all counties';
             showCounties = true;
         } else {
@@ -148,4 +148,4 @@ class Location2 extends Component {
     }
 }
 
-export default Location2;
+export default Location;

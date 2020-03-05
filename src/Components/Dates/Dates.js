@@ -8,7 +8,7 @@ import {
   DropdownItem
 } from 'reactstrap';
 
-import '../../styles/Dates.css';
+import 'Styles/Dates.css';
 
 
 class Dates extends Component {
