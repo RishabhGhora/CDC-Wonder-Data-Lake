@@ -50,3 +50,8 @@
     margin-left: 65%;
     margin-top: 35%;
 }
+
+#content {
+	display: flex;
+	flex: 25% 75%;
+}

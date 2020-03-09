@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import * as d3 from 'd3';
 import 'Styles/LineChart.css';
 
-const width = 850;
-const height = 500;
+const width = 800;
+const height = 450;
 const margin = {top: 20, right: 5, bottom: 20, left: 35};
 const blue = '#2980b9';
 

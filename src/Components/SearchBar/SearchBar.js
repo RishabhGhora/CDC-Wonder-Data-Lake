@@ -9,20 +9,37 @@ respective JavaScript files.
 import React, { Component } from 'react'
 
 class SearchBar extends Component {
+	constructor(props) {
+		super(props)
+		this.state = {
+			topics: [],
+			base: "graph",
+		}
+	}
+
+	search = () => {
+		var search_res = document.getElementById('search').value;
+		if (search_res !== "") {
+			search_res = search_res.replace(/\s+/g, '%');
+			window.location.href = encodeURI(this.state.base + '/' + search_res);
+		}
+	}
 
 	render() {
+		const { topics } = this.state;
+
+		var topics_list = "";
+		for (const opt in topics)
+			topics_list += '<option value='+opt+' />';
+
 		return (
-			<div class="SearchBar">
-				<input list="topics" type="text" id="search" autocomplete="off" />
+			<div className="SearchBar">
+				<input list="topics" type="text" id="search" autoComplete="off" />
 				<datalist id="topics">
-					<option value="Cancer" />
-					<option value="Infant Deaths" />
-					<option value="Infectious Diseases" />
+					{topics_list}
 				</datalist>
-				<button type="button">
-					<a href="/graph">
-						Search
-					</a>
+				<button type="button" onClick={this.search}>
+					Search
 				</button>
 			</div>
 		)
