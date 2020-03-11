@@ -20,8 +20,13 @@ class SearchBar extends Component {
 	search = () => {
 		var search_res = document.getElementById('search').value;
 		if (search_res !== "") {
-			search_res = search_res.replace(/\s+/g, '%');
-			window.location.href = encodeURI(this.state.base + '/' + search_res);
+			// Sanitize our data a little bit. A valid search is simple: only upper/lowercase letters
+			// and numbers 0-9
+			const valid = search_res.match(/[^a-zA-Z0-9 ]/) === null;
+			if (valid) {
+				search_res = search_res.replace(/\s+/g, '_');
+				window.location.href = encodeURI(this.state.base + '/' + search_res);
+			}
 		}
 	}
 
@@ -38,7 +43,7 @@ class SearchBar extends Component {
 				<datalist id="topics">
 					{topics_list}
 				</datalist>
-				<button type="button" onClick={this.search}>
+				<button type="button" onClick={this.search.bind(this)}>
 					Search
 				</button>
 			</div>

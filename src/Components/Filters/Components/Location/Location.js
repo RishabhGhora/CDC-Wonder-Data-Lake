@@ -10,7 +10,7 @@ import {
 
 import 'Styles/Location.css';
 
-import Counties from '../Counties/Counties.js';
+import Counties from './Counties/Counties.js';
 
 class Location extends Component {
     constructor(props) {
